@@ -3,16 +3,26 @@ body {
     background-color: gray;
 }
 
+/* Main title */
+.mainTitle {
+    font-size: 50px;
+    text-align: center;
+    font-style: unset;
+    margin-top: 3%;
+}
+
+/* Style for the option buttons in main page */
 .optButtonsBox {
     position: absolute;
     top: 15%;
-    left: 30%;
+    left: 35%;
     width: 20%;
     border: 10px solid black;
     padding: 30px;
     margin: 30px;
 }
 
+/* Estimate price button */
 .estPrice {
     /* position: absolute; */
     margin-top: 30%; 
@@ -23,8 +33,10 @@ body {
     cursor: pointer; 
     padding: 10px 15px;
     font-size: 25px;
+    transition-duration: 0.5s;
 }
 
+/* Calculate yards button */
 .calcYards {
     /* position: absolute; */
     margin-top: 30%; 
@@ -35,8 +47,10 @@ body {
     cursor: pointer;
     padding: 10px 15px;
     font-size: 25px;
+    transition-duration: 0.5s;
 }
 
+/* Calculate price button */
 .calcPrice {
     /* position: absolute; */
     margin-top: 30%; 
@@ -47,4 +61,18 @@ body {
     cursor: pointer;
     padding: 10px 15px;
     font-size: 25px;
+    transition-duration: 0.5s;
 }
+
+
+/* Make the buttons hover */
+.calcPrice:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
+}
+.calcYards:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
+}
+.estPrice:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
+}
+
