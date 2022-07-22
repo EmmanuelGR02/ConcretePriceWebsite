@@ -1,0 +1,24 @@
+body {
+    background-color: gray;
+}
+
+/* Title */
+.yardsTitle {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 5%;
+}
+
+/* Box holding the info text boxes */
+.infoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 500px;
+    border: 10px solid black;
+    padding: 30px;
+    margin: 30px;
+}
