@@ -13,12 +13,79 @@ body {
 
 /* Box holding the info text boxes */
 .infoBox {
-    display: flex;
+    display: absolute;
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 500px;
+    height: 240px;
     border: 10px solid black;
     padding: 30px;
     margin: 30px;
 }
+
+/* Info text boxes alignments */
+.yardLength {
+    font-size: 25px;
+    width: 200px;
+    margin-top: -95%;
+    margin-left: 0%;
+    border: 2px solid black;
+}
+.yardWidth {
+    font-size: 25px;
+    width: 200px;
+    margin-top: 0%;
+    margin-left: 0%;  
+    border: 2px solid black;
+}
+.yardDepth {
+    font-size: 25px;
+    width: 200px;
+    margin-top: 0%;
+    margin-left: 0%;  
+    border: 2px solid black;
+}
+/* *****END***** */
+
+/* Calculate button */
+.yardCalc {
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    margin-top: 5%;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.yardCalc:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
+}
+
+/* invalid measurements and placeholder settings */
+.yardLength::placeholder {
+    color: black;
+    opacity: 0.3;
+}
+.invalidLength {
+    font-size: 10px;
+    color: red;
+}
+
+.yardWidth::placeholder {
+    color: black;
+    opacity: 0.3;
+}
+.invalidLength {
+    font-size: 10px;
+    color: red;
+}
+
+.yardDepth::placeholder {
+    color: black;
+    opacity: 0.3;
+}
+.invalidLength {
+    font-weight: bolder;
+    font-size: 12px;
+    color:red;
+}
+/* *****END***** */

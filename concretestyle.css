@@ -14,18 +14,18 @@ body {
 /* Style for the option buttons in main page */
 .optButtonsBox {
     position: absolute;
-    top: 15%;
+   top: 20%;
     left: 35%;
     width: 20%;
     border: 10px solid black;
-    padding: 30px;
-    margin: 30px;
+    padding: 20px;
+    margin: 20px;
 }
 
 /* Estimate price button */
 .estPrice {
     /* position: absolute; */
-    margin-top: 30%; 
+    margin-top: 15%; 
     margin-left: 1%; 
     border-radius: 30px;
     color: white;
@@ -39,8 +39,8 @@ body {
 /* Calculate yards button */
 .calcYards {
     /* position: absolute; */
-    margin-top: 30%; 
-    margin-left: 8%;
+    margin-top: 5%; 
+    margin-left: 0%;
     border-radius: 30px;
     color: white;
     background-color: black;
@@ -53,7 +53,7 @@ body {
 /* Calculate price button */
 .calcPrice {
     /* position: absolute; */
-    margin-top: 30%; 
+    margin-top: 15%; 
     margin-left: 0%; 
     border-radius: 30px;
     color: white;
