@@ -8,19 +8,18 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     text-align: center;
     font-size: 70px;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 /* Box holding the info text boxes */
 .infoBox {
-    display: absolute;
     align-items: center;
     justify-content: center;
     width: 280px;
     height: 337px;
     border: 10px solid black;
-    padding: 30px;
-    margin: 30px;
+    padding: 25px;
+    margin: 25px;
 }
 
 /* Info text boxes alignments */
