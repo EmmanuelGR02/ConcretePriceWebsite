@@ -3,21 +3,26 @@
 
 <head>
     <link rel="stylesheet" href="yardsStyle.css">
+    <script src="./JScalcyards.js"></script>
 </head>
 
     <body>
 
         <h1 class="yardsTitle">Yard Calculator</h1>
-
+        <center><h3 style="color: lightgrey; font-size: 22px; text-decoration: underline;">Enter Measurements Below: </h3></center>
         <center><div class="infoBox">
-            <input id="yardLength" class="yardLength" type="text" placeholder="Lenght (feet)">
-            <p id="invalidLength" class="invalidLength">*INVALID LENGTH*</p>
-            <input id="yardWidth" class="yardWidth" type="text" placeholder="Width (feet)">
-            <p id="invalidWidth" class="invalidLength">*INVALID WIDTH*</p>
-            <input id="yardDepth" class="yardDepth" type="text" placeholder="Depth (inches)">
-            <p id="invalidWidth" class="invalidLength">*INVALID DEPTH*</p>
-            <button id="yardCalc" class="yardCalc">CALCULATE</button>
+            <button class="return" onclick="window.location.href='index.html'">Return to main menu</button>
+            <p style="font-size: 25px; font-weight: bolder;" >Length(ft.): <input id="yardLength" class="yardLength" type="text" placeholder="(ex. 10)"></p>
+            <p id="invalidLength" class="invalidMessage" style="display: none;">*INVALID LENGTH*</p>
+            <p style="font-size: 25px; font-weight: bolder;" >Width(ft.): <input id="yardWidth" class="yardWidth" type="text" placeholder="(ex. 15)"></p>
+            <p id="invalidWidth" class="invalidMessage" style="display: none;">*INVALID WIDTH*</p>
+            <p style="font-size: 25px; font-weight: bolder;" >Depth(in.): <input id="yardDepth" class="yardDepth" type="text" placeholder="(ex. 4)"></p>
+            <p id="invalidDepth" class="invalidMessage" style="display: none;">*INVALID DEPTH*</p>
+            <button id="yardCalc" class="yardCalc" onclick="yardsMain()">CALCULATE</button>
         </div></center>
+        <center><h1 id="totalYards"></h1></center>
+        <center><h3 id="ifString" style="font-weight: bolder; color: white;"></h2></center>
+        <center><button id="resetButton" class="resetButton" onclick="window.location.href='calcYards.html'">RESET</button></center>
 
     </body>
 </html>

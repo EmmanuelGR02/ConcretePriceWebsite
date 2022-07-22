@@ -16,8 +16,8 @@ body {
     display: absolute;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 240px;
+    width: 280px;
+    height: 337px;
     border: 10px solid black;
     padding: 30px;
     margin: 30px;
@@ -26,33 +26,36 @@ body {
 /* Info text boxes alignments */
 .yardLength {
     font-size: 25px;
-    width: 200px;
+    width: 90px;
     margin-top: -95%;
     margin-left: 0%;
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 0px;
 }
 .yardWidth {
     font-size: 25px;
-    width: 200px;
+    width: 90px;
     margin-top: 0%;
     margin-left: 0%;  
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 0px;
 }
 .yardDepth {
     font-size: 25px;
-    width: 200px;
+    width: 90px;
     margin-top: 0%;
     margin-left: 0%;  
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 0px;
 }
 /* *****END***** */
 
 /* Calculate button */
 .yardCalc {
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     background-color: black;
-    margin-top: 5%;
+    margin-top: 3%;
     border-radius: 10px;
     transition-duration: 0.5s;
 }
@@ -60,32 +63,49 @@ body {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
 }
 
+/* Reset Button */
+.resetButton {
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+    display: none;
+}
+.resetButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 white;
+}
+
+.return {
+    margin-top: -25%;
+    margin-left: 5%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+.return:hover {
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.5),0 12px 10px 0 rgb(227, 62, 62);
+}
+
 /* invalid measurements and placeholder settings */
 .yardLength::placeholder {
     color: black;
     opacity: 0.3;
 }
-.invalidLength {
+.invalidMessage {
     font-size: 10px;
-    color: red;
+    color: lightsalmon;
 }
-
 .yardWidth::placeholder {
     color: black;
     opacity: 0.3;
 }
-.invalidLength {
-    font-size: 10px;
-    color: red;
-}
-
 .yardDepth::placeholder {
     color: black;
     opacity: 0.3;
 }
-.invalidLength {
-    font-weight: bolder;
-    font-size: 12px;
-    color:red;
-}
+
 /* *****END***** */
+
