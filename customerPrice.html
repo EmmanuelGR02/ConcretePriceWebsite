@@ -6,8 +6,13 @@
     </head>
 
     <body>
-        <h1 class="customerEstTitle">Price Estimator</h1>
+        <!--TITLE-->
+        <center><div>
+            <span class="customerEstTitle" style="color: black;">Price&nbsp;</span>
+            <span class="customerEstTitle" style="color: white;">Estimator&nbsp;</span>
+        </div></center>
         <center><h3 style="color: lightgrey; font-size: 22px; text-decoration: underline;">Fill out information bellow: </h3></center>
+        <!--Cntains the box with the text boxes and calculate button-->
         <center><div class="estInfoBox">
             <button class="return" onclick="window.location.href='index.html'">Return to main menu</button>
             <p style="font-size: 25px; font-weight: bolder;" >Length(ft.): <input id="yardLength" class="yardLength" type="text" placeholder="(ex. 10)"></p>
@@ -17,12 +22,24 @@
             <p style="font-size: 25px; font-weight: bolder;" >Depth(in.): <input id="yardDepth" class="yardDepth" type="text" placeholder="(ex. 4)"></p>
             <p id="invalidDepth" class="invalidMessage" style="display: none;">*INVALID DEPTH*</p>
             <p style="font-size: 25px; font-weight: bolder;" >Type of Job: <input id="estType" class="estType" type="text" placeholder="ex. sidewalk, driveway, etc"></p>
-            <p style="font-size: 20px; font-weight: bolder;" >Removing prior(concrete, wooden deck, etc)?: <input id="estRemoval" class="estRemoval" type="text" placeholder="(yes/no)"></p>
+            <p style="font-size: 20px; font-weight: bolder;" >Needs to remove(old concrete, wooden deck, etc)?: <input id="estRemoval" class="estRemoval" type="text" placeholder="(yes/no)"></p>
+            <p id="invalidYesNo" class="invalidMessage" style="display: none;">*INVALID INPUT*</p>
 
             <button id="yardCalc" class="yardCalc" onclick="estMain()">CALCULATE</button>
         </div></center>
-        <center><h1 id="totalYards"></h1></center>
-        <center><h1 id="estimate"></h1></center>
+        <!--displays error message, total yards and estimate-->
+        <center><div>
+            <span id="estTotalYards" style="color: black; font-size: 40px; font-weight: bolder;"></span>
+            <span id="estTotalYardsNum" style="color: white; font-size: 40px; font-weight: bolder;"></span>
+        </div></center>
+
+        <center><div>
+            <span id="estPrice" style="color: black; font-size: 35px; font-weight: bolder;"></span>
+            <span id="estMeasurements" style="color: white; font-size: 35px; font-weight: bolder;"></span>
+            <span id="estJob" style="color: black; font-size: 35px; font-weight: bolder;"></span>
+            <span id="estPriceNum" style="color: white; font-size: 35px; font-weight: bolder;"></span>
+        </div></center>
+
         <center><h3 id="ifString" style="font-weight: bolder; color: white;"></h2></center>
         <center><button id="resetButton" class="resetButton" onclick="window.location.href='customerPrice.html'">RESET</button></center>
 

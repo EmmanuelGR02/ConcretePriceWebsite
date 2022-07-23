@@ -11,7 +11,9 @@ function yardsMain() {
 
     // if totalYards is not a number, displays error message
     if (totalYards >= 0) {
-        document.getElementById("totalYards").innerHTML = "Total yards: " + totalYards;
+        document.getElementById("totalYards").innerHTML = "Total yards: ";
+        document.getElementById("totalYardsNum").innerHTML = totalYards;
+
         document.getElementById("resetButton").style.display="block";
     } else {
         document.getElementById("ifString").innerHTML = "**Do NOT enter letters or special characters**";

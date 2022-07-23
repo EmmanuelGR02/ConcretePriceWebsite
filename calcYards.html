@@ -7,8 +7,12 @@
 </head>
 
     <body>
-
-        <h1 class="yardsTitle">Yard Calculator</h1>
+        <!--TITLE-->
+        <center><div>
+            <span class="yardsTitle" style="color: black;">Yard&nbsp;</span>
+            <span class="yardsTitle" style="color: white;">Calculator&nbsp;</span>
+        </div></center>
+        <!--Cntains the box with the text boxes and calculate button-->
         <center><h3 style="color: lightgrey; font-size: 22px; text-decoration: underline;">Enter Measurements Below: </h3></center>
         <center><div class="infoBox">
             <button class="return" onclick="window.location.href='index.html'">Return to main menu</button>
@@ -20,7 +24,11 @@
             <p id="invalidDepth" class="invalidMessage" style="display: none;">*INVALID DEPTH*</p>
             <button id="yardCalc" class="yardCalc" onclick="yardsMain()">CALCULATE</button>
         </div></center>
-        <center><h1 id="totalYards"></h1></center>
+        <!--Displays total yards, error message, reset button-->
+        <center><div>
+            <span id="totalYards" style="color: black; font-size: 40px; font-weight: bolder;"></span>
+            <span id="totalYardsNum" style="color: white; font-size: 40px; font-weight: bolder;"></span>
+        </div></center>
         <center><h3 id="ifString" style="font-weight: bolder; color: white;"></h2></center>
         <center><button id="resetButton" class="resetButton" onclick="window.location.href='calcYards.html'">RESET</button></center>
 

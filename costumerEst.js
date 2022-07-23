@@ -5,6 +5,7 @@ function estMain() {
     var depth = document.getElementById("yardDepth").value;
     var jobType = document.getElementById("estType").value;
     var yesNo = document.getElementById("estRemoval").value;
+
     var price;
     var totalYards;
 
@@ -15,7 +16,8 @@ function estMain() {
 
     // if totalYards is not a number, displays error message
     if (totalYards >= 0) {
-        document.getElementById("totalYards").innerHTML = "Total yards: " + totalYards;
+        document.getElementById("estTotalYards").innerHTML = "Total yards: ";
+        document.getElementById("estTotalYardsNum").innerHTML = totalYards;
         document.getElementById("resetButton").style.display="block";
     } else {
         document.getElementById("ifString").innerHTML = "**Do NOT enter letters or special characters**";
@@ -58,6 +60,7 @@ function estMain() {
         let tempPrice;
         let estPrice;
 
+        // if yards are less than 5, multiply by 300 else multiply by 170
         if (totalYards < 5) {
             tempPrice= totalYards * 300;
         } else{ 
@@ -65,32 +68,51 @@ function estMain() {
         }
 
         if (totalYards > 0.5 && totalYards < 1) {
-            if (yesNo == "YES") {
+            // if yes add price is more
+            if (yesNo == "yes" || yesNo == "YES") {
                 price = tempPrice + 1500;
                 estPrice = price + 1200;
-                document.getElementById("estimate").innerHTML = "Estimated Price for " + " " +length + "ft. x " + width + "ft. x " + depth + "in. " + jobType + ": $" + price + " - " + estPrice;
+
+                document.getElementById("estPrice").innerHTML = "Estimate Price For "
+                document.getElementById("estMeasurements").innerHTML = " " +length + "ft x " + width + "ft x " + depth + "in ";
+                document.getElementById("estJob").innerHTML = jobType + ": "
+                document.getElementById("estPriceNum").innerHTML = "$" + price + " - " + estPrice;
             } else {
                 price = tempPrice + 1000;
                 estPrice = price + 900;
-                document.getElementById("estimate").innerHTML = "Estimated Price for " + " " +length + "ft. x " + width + "ft. x " + depth + "in. " + jobType + ": $" + price + " - " + estPrice;
-            }
-        } else if (totalYards > 1 && totalYards < 3) {
-            if (yesNo == "YES") {
-                price = tempPrice + 1700;
-                estPrice = price + 1500;
-                document.getElementById("estimate").innerHTML = "Estimated Price for " + " " +length + "ft. x " + width + "ft. x " + depth + "in. " + jobType + ": $" + price + " - " + estPrice;
-            } else {
-                price = tempPrice + 1500;
-                estPrice = price + 1400;
-                document.getElementById("estimate").innerHTML = "Estimated Price for " + " " +length + "ft. x " + width + "ft. x " + depth + "in. " + jobType + ": $" + price + " - " + estPrice;
-            }
-        } else if (totalYards > 3 && totalYards < 6) {
-            if (yesNo == "YES") {
-                price = tempPrice + 2200;
-                estPrice = price + 2000;
-                document.getElementById("estimate").innerHTML = "Estimated Price for " + " " +length + "ft. x " + width + "ft. x " + depth + "in. " + jobType + ": $" + price + " - " + estPrice;
-            }
-        }
 
+                document.getElementById("estPrice").innerHTML = "Estimate Price For "
+                document.getElementById("estMeasurements").innerHTML = " " +length + "ft x " + width + "ft x " + depth + "in ";
+                document.getElementById("estJob").innerHTML = jobType + ": "
+                document.getElementById("estPriceNum").innerHTML = "$" + price + " - " + estPrice;
+            }
+        // loop through the yards and add 900 per yard and 1100 for the estimate    
+        } else if (totalYards > 1) {
+            if (yesNo == "yes" || yesNo == "YES") {
+                for (let i = 0; i < totalYards; i ++) {
+                    price = i * 750;
+                    estPrice = price + 1500;
+                }
+            } else if (yesNo == "no" || yesNo == "NO") {
+                for (let i = 0; i < totalYards; i ++) {
+                    price = i * 600;
+                    estPrice = price + 1200;
+                }
+            } else {
+                document.getElementById("invalidYesNo").style.display="block";
+                for (let i = 0; i < totalYards; i ++) {
+                    price = i * 500;
+                    estPrice = price + 1200;
+                }
+            }
+            // prompt the price tp the user
+            document.getElementById("estPrice").innerHTML = "Estimate Price For "
+            document.getElementById("estMeasurements").innerHTML = " " +length + "ft x " + width + "ft x " + depth + "in ";
+            document.getElementById("estJob").innerHTML = jobType + ": "
+            document.getElementById("estPriceNum").innerHTML = "$" + price + " - " + estPrice;
+
+        } else {
+            document.getElementById("ifString").innerHTML = "***INVALID AMOUNT***";
+        }
     }
 }
