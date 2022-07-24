@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="contractorStyle.css">
+    </head>
+
+    <body>
+        <!--TITLE-->
+        <center><div class="contractorTitle">
+            <span style="color: black;">Calculate</span>
+            <span style="color: white;">Job</span>
+            <span style="color: black;">Price</span>
+        </div></center>
+        <hr>
+        <!--fill info msg-->
+        <center><h3 style="text-decoration: underline; font-size: 23px; color:  lightgray;">Fill Out Information Bellow</h3></center>
+        <!--box containing the input placeholders-->
+        <center><div class="contractorInfoBox">
+            <button class="contReturn" onclick="window.location.href='index.html'">Return to main menu</button>
+            <p class="textPlaceholder">Length ft: <input class="measurementPlaceholder" id="contLength" type="text" placeholder="(ex. 15)"></p>
+            <p class="textPlaceholder">Width ft: <input class="measurementPlaceholder" id="contWidth" type="text" placeholder="(ex. 10)"></p>
+            <p class="textPlaceholder">Depth in: <input class="measurementPlaceholder" id="contDepth" type="text" placeholder="(ex. 4)"></p>
+            <hr>
+            <p class="textPlaceholder">Gravel Price: <input class="pricePlaceholder" id="contGravel" type="text" placeholder="(ex. 50)"></p>
+            <p class="textPlaceholder">Machines Price: <input class="pricePlaceholder" id="contMachines" type="text" placeholder="(ex. 300)"></p>
+            <p class="textPlaceholder">Other Utilities $: <input class="pricePlaceholder" id="contUtilities" type="text" placeholder="(ex. 200)"></p>
+            <p class="textPlaceholder">Personal Profit: <input class="pricePlaceholder" id="contProfit" type="text" placeholder="(ex. 300)"></p>
+            <p class="textPlaceholder">Number of workers: <input class="pricePlaceholder" id="contWorkers" style="width: 70px;" type="text" placeholder="(ex. 2)"></p>
+
+            <button id="contCalculate" class="contCalculate" onclick="">CALCULATE</button>
+        </div></center>
+
+    </body>
+
+</html>

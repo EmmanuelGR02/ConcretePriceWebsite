@@ -1,0 +1,68 @@
+body {
+    background-color: gray;
+}
+
+/* miain title */
+.contractorTitle {
+    font-size: 70px;
+}
+
+/* info box syle */
+.contractorInfoBox {
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 600px;
+    border: 10px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+
+/* measurement placeholder */
+.measurementPlaceholder {
+    font-size: 25px;
+    width: 90px;
+    border: 3px solid black;
+    margin: 0px;
+}
+
+/* prices placeholders */
+.pricePlaceholder {
+    font-size: 25px;
+    width: 110px;
+    border: 3px solid black;
+    margin: 0px;
+}
+
+/* placeholder text */
+.textPlaceholder {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* Return Button */
+.contReturn {
+    margin-top: -25%;
+    margin-left: 5%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+.contReturn:hover {
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.5),0 12px 10px 0 rgb(227, 62, 62);
+}
+
+/* calcuate button */
+.contCalculate {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    margin-top: 3%;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.contCalculate:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.7),0 17px 50px 0 rgba(0,0,0,0.7);
+}
