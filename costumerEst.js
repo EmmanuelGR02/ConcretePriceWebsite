@@ -11,6 +11,7 @@ function estMain() {
 
 
     checkInvalidInput();
+    warning();
     calculateYards();
     calculatePrice();
 
@@ -114,5 +115,9 @@ function estMain() {
         } else {
             document.getElementById("ifString").innerHTML = "***INVALID AMOUNT***";
         }
+    }
+
+    function warning() {
+        prompt("**This estimates are not 100% reliable**")
     }
 }
