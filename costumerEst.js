@@ -1,8 +1,8 @@
 function estMain() {
     // declare the measurements to variables
-    var length = document.getElementById("yardLength").value;
-    var width = document.getElementById("yardWidth").value;
-    var depth = document.getElementById("yardDepth").value;
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
+    var depth = document.getElementById("depth").value;
     var jobType = document.getElementById("estType").value;
     var yesNo = document.getElementById("estRemoval").value;
 
@@ -33,7 +33,7 @@ function estMain() {
         totalYards = Math.round(tempYards * 100.0) / 100.0;
     }
 
-    // Check if the any placeholder is left on blank, and it it is, display error message
+    // Check if the any placeholder is left on blank, and if it is, display error message
     function checkInvalidInput() {
         if (length == "" && width == "" && depth == "") {
             document.getElementById("invalidLength").style.display="block";
@@ -91,18 +91,18 @@ function estMain() {
         } else if (totalYards > 1) {
             if (yesNo == "yes" || yesNo == "YES") {
                 for (let i = 0; i < totalYards; i ++) {
-                    price = i * 750;
-                    estPrice = price + 1500;
+                    price = i * 1600;
+                    estPrice = price + 1700;
                 }
             } else if (yesNo == "no" || yesNo == "NO") {
                 for (let i = 0; i < totalYards; i ++) {
-                    price = i * 600;
-                    estPrice = price + 1200;
+                    price = i * 1200;
+                    estPrice = price + 1400;
                 }
             } else {
                 document.getElementById("invalidYesNo").style.display="block";
                 for (let i = 0; i < totalYards; i ++) {
-                    price = i * 500;
+                    price = i * 1000;
                     estPrice = price + 1200;
                 }
             }

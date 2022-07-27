@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="contractorStyle.css">
+        <script src="./calculatePrice.js"></script>
     </head>
 
     <body>
@@ -17,19 +18,33 @@
         <!--box containing the input placeholders-->
         <center><div class="contractorInfoBox">
             <button class="contReturn" onclick="window.location.href='index.html'">Return to main menu</button>
-            <p class="textPlaceholder">Length ft: <input class="measurementPlaceholder" id="contLength" type="text" placeholder="(ex. 15)"></p>
-            <p class="textPlaceholder">Width ft: <input class="measurementPlaceholder" id="contWidth" type="text" placeholder="(ex. 10)"></p>
-            <p class="textPlaceholder">Depth in: <input class="measurementPlaceholder" id="contDepth" type="text" placeholder="(ex. 4)"></p>
+            <p class="textPlaceholder">Length ft: <input class="measurementPlaceholder" id="length" type="text" placeholder="(ex. 15)"></p>
+            <p class="textPlaceholder">Width ft: <input class="measurementPlaceholder" id="width" type="text" placeholder="(ex. 10)"></p>
+            <p class="textPlaceholder">Depth in: <input class="measurementPlaceholder" id="depth" type="text" placeholder="(ex. 4)"></p>
             <hr>
-            <p class="textPlaceholder">Gravel Price: <input class="pricePlaceholder" id="contGravel" type="text" placeholder="(ex. 50)"></p>
-            <p class="textPlaceholder">Machines Price: <input class="pricePlaceholder" id="contMachines" type="text" placeholder="(ex. 300)"></p>
-            <p class="textPlaceholder">Other Utilities $: <input class="pricePlaceholder" id="contUtilities" type="text" placeholder="(ex. 200)"></p>
-            <p class="textPlaceholder">Personal Profit: <input class="pricePlaceholder" id="contProfit" type="text" placeholder="(ex. 300)"></p>
-            <p class="textPlaceholder">Number of workers: <input class="pricePlaceholder" id="contWorkers" style="width: 70px;" type="text" placeholder="(ex. 2)"></p>
+            <p class="textPlaceholder">Gravel Price: <input class="pricePlaceholder" id="gravel" type="number" placeholder=""></p>
+            <p class="textPlaceholder">Machines Price: <input class="pricePlaceholder" id="machines" type="number" placeholder=""></p>
+            <p class="textPlaceholder">Other Utilities $: <input class="pricePlaceholder" id="utilities" type="number" placeholder=""></p>
+            <p class="textPlaceholder">Personal Profit: <input class="pricePlaceholder" id="profit" type="number" placeholder=""></p>
+            <p class="textPlaceholder">Number of workers: <input class="pricePlaceholder" id="workers" style="width: 70px;" type="number" placeholder=""></p>
 
-            <button id="contCalculate" class="contCalculate" onclick="">CALCULATE</button>
+            <button class="contCalculate" onclick="contPrice()">CALCULATE</button>
         </div></center>
 
-    </body>
+    </div></center>
+    <!--displays error message, total yards and estimate-->
+    <center><div>
+        <span id="totalYards" style="color: black; font-size: 30px; font-weight: bolder;"></span>
+        <span id="totalYardsNum" style="color: white; font-size: 30px; font-weight: bolder;"></span>
+    </div></center>
 
+    <center><div>
+        <span id="totalPrice" style="color: black; font-size: 40px; font-weight: bolder;"></span>
+        <span id="totalPriceNum" style="color: white; font-size: 40px; font-weight: bolder;"></span>
+    </div></center>
+
+    <center><h3 id="ifString" style="font-weight: bolder; color: white;"></h2></center>
+    <center><button id="resetButton" class="resetButton" onclick="window.location.href='contractorPrice.html'">RESET</button></center>
+
+    </body>
 </html>
